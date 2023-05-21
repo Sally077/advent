@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@400;500&family=Satisfy&display=swap');
 :root {
 	--red: #b41d1d;
 	--red-2: #b41d1d;
 	--red-dark-shade: #9b181d;
-	--black: #222;
+	--black: #2a2b2c;
 	--green: #024c46;
 	--green-2: #507524;
 	--green-3: #578521;
@@ -12,12 +13,16 @@
 	--beige-dark-shade: #dfceab;
 	--blue-dark: #404148;
 	--blue: #5cb9be;
+    --card: #b0916e;
+    --dark-card: #806c51;
+    --silver: #C0C0C0;
+    --green-1: #466d1d;
 }
 body {
 	background: #fff;
-	font-family: "Castoro", sans-serif;
+	font-family: "Mountains of Christmas", sans-serif;
 	padding: 2%;
-	background: url("https://assets.codepen.io/567707/background-snowlake.jpg")
+	background: url("./images/christmas-background.jpg")
 		bottom center / cover;
 }
 * {
@@ -143,7 +148,7 @@ main {
 	height: 100%;
 	min-width: 4rem;
 	border-radius: 3px;
-	border: 2px solid var(--black);
+	border: 2px solid var(--dark-card);
 	box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4),
 		inset 0 -7px 9px -7px rgba(0, 0, 0, 0.4);
 	display: flex;
@@ -154,13 +159,14 @@ main {
 		grid-column: span 2;
 	}
 	.span {
-		font-family: Ultra, serif;
+		font-family: 'Mountains of Christmas', serif;
+        font-weight: 700;
         cursor: pointer;
 		font-size: clamp(0.8rem, 5vw, 1.8rem);
 		display: flex;
-		background: var(--red);
-		color: var(--beige);
-		box-shadow: 0 0 0 1px var(--beige), 0 0 0 4px var(--red);
+		background: var(--green-1);
+		color: var(--silver);
+		box-shadow: 0 0 0 2px var(--silver), 0 0 0 6px var(--dark-card);
 		width: 50%;
 		height: 50%;
 		border-radius: 100%;
@@ -183,9 +189,9 @@ main {
 	&:after {
 		content: "";
 		border-radius: 0 0 5rem 5rem;
-		width: 40%;
-		height: 20%;
-		background: linear-gradient(var(--black), #222);
+		width: 50%;
+		height: 10%;
+		background: linear-gradient(var(--dark-card), #222);
 		position: absolute;
 		top: 0;
 	}
@@ -341,13 +347,15 @@ main {
 	&:nth-child(1),
 	&:nth-child(9),
 	&:nth-child(17) {
-		background: red
-			10% center / 200% 200%;
+		border: solid 4px var(--dark-card);
+        background-color: var(--card);
+        border-radius: 3px;
+        display: flex;
 	}
 	&:nth-child(4),
 	&:nth-child(12),
 	&:nth-child(20) {
-		background: green
+		background: url("./images/green-background.png")
 			center center / cover;
 	}
 }
